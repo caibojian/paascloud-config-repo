@@ -14,7 +14,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: 123456
+    password: root
     type: com.alibaba.druid.pool.DruidDataSource
     initial-size: 10
     min-idle: 10
@@ -23,28 +23,28 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://root:root@paascloud-eureka:8761/eureka/
+      defaultZone: http://root:root@127.0.0.1:8761/eureka/
 paascloud:
   server:
     eureka:
       port: 8761
       hostname: paascloud-eureka
-      serviceUrl: http://root:root@paascloud-eureka:8761/eureka/
+      serviceUrl: http://root:root@127.0.0.1:8761/eureka/
     discovery:
       port: 8080
       hostname: paascloud-discovery
-      serviceUrl: http://admin:admin@paascloud-discovery:8080
+      serviceUrl: http://admin:admin@127.0.0.1:8080
     gateway:
       port: 80
       hostname: paascloud-gateway
     monitor:
       port: 8010
       hostname: paascloud-monitor
-      serviceUrl: http://paascloud-monitor:8010
+      serviceUrl: http://127.0.0.1:8010
     zipkin:
       port: 8020
       hostname: paascloud-zipkin
-      serviceUrl: http://paascloud-zipkin:8020
+      serviceUrl: http://127.0.0.1:8020
     provider:
       ehc:
         port: 8040
