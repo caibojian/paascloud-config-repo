@@ -9,7 +9,7 @@ spring:
   redis:
     host: localhost
     password: 
-    port: 32768
+    port: 32772
     timeout: 0
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
